@@ -178,6 +178,21 @@ void main(){
   //
   // print(readingUsers);
 
+  //  way 1
+  //   print(employees);
+  // var totalSalary = employees.reduce(
+  //         (a, b) => {
+  //       "salary": (a["salary"] as int) + (b["salary"] as int)
+  //     }
+  // )["salary"];
+  //
+  // print("Total Salary Paid: $totalSalary");
+
+//   way 2
+//   var salaries =  employees.map((emp) => emp['salary'] as int).toList();
+//   var total_Salary = salaries.reduce((a,b) => a+b);
+//   print(total_Salary);
+
   // not working properly only print empty list
   // var readingUsers = users.where((user) {
   //   var hobbies = (user['profile']?['hobbies'] ?? []) as List;
@@ -197,6 +212,7 @@ void main(){
  //
  //  int multiply = numbers.reduce((prev, curr)=> prev*curr);
  //  print(multiply);
+ // ==============================================================================================
 
 
     List<Map<String, dynamic>> employees = [
@@ -219,30 +235,6 @@ void main(){
         "salary": 78000,
       },
       {
-        "emp_id": 104,
-        "name": "Sneha",
-        "company": "TCS",
-        "salary": 60000,
-      },
-      {
-        "emp_id": 105,
-        "name": "Karan",
-        "company": "Infosys",
-        "salary": 65000,
-      },
-      {
-        "emp_id": 106,
-        "name": "Aditya",
-        "company": "Apple",
-        "salary": 100000,
-      },
-      {
-        "emp_id": 107,
-        "name": "Meena",
-        "company": "Wipro",
-        "salary": 58000,
-      },
-      {
         "emp_id": 108,
         "name": "Vikas",
         "company": "IBM",
@@ -250,19 +242,23 @@ void main(){
       },
     ];
 
-    //  way 1
-  //   print(employees);
-  // var totalSalary = employees.reduce(
-  //         (a, b) => {
-  //       "salary": (a["salary"] as int) + (b["salary"] as int)
-  //     }
-  // )["salary"];
-  //
-  // print("Total Salary Paid: $totalSalary");
 
-//   way 2
-//   var salaries =  employees.map((emp) => emp['salary'] as int).toList();
-//   var total_Salary = salaries.reduce((a,b) => a+b);
-//   print(total_Salary);
+   List<A> list=[A("pradeep",1),A("kapil",2)];
+// var new_user =  employees.where((user) => user['name']).toList();
+// print(new_user);
 
+// var new_user =  employees.where((user) => user['name']).toList();
+// print(new_user);
+  var new_user =  list.where((user) => user.name.isNotEmpty).toList();
+  print(new_user);
+
+// var new_user_list = employees.map((user)=> user['name']).toList();
+// print(new_user_list);
 }
+
+ class A{
+    String name;
+    int id;
+
+     A(this.name,this.id);
+ }
