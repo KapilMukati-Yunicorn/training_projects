@@ -10,6 +10,15 @@ class NewBox<T>{
   NewBox(this.value);
 }
 
+class _testing{
+  String? value;
+  _testing(this.value);
+}
+
+class A extends _testing{
+  A(String value):super(value);
+}
+
 void main(){
   var B = Box("Hello");
   print(B.value);
