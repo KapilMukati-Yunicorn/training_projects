@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:training/demo.dart';
 import 'package:training/flutter_widgets/container_widget.dart';
+import 'package:training/text_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -94,8 +95,11 @@ class _MyHomePageState extends State<MyHomePage> {
       // body: Center(
       //   child: DemoClass(),
       // ),
+      // body: Center(
+      //   child: NewContainerClass(),
+      // ),
       body: Center(
-        child: NewContainerClass(),
+        child: TextWidget(),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
