@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:training/demo.dart';
+import 'package:training/flutter_widgets/TextFormFieldWidget.dart';
+import 'package:training/flutter_widgets/card_widget.dart';
 import 'package:training/flutter_widgets/container_widget.dart';
-import 'package:training/text_widget.dart';
+import 'package:training/flutter_widgets/text_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +36,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: MyHomePage(title: "title"),
+      // home: MyHomePage(title: "title"),
+        home: CompleteFormValidation(),
       debugShowCheckedModeBanner: false
     );
   }
@@ -98,9 +101,11 @@ class _MyHomePageState extends State<MyHomePage> {
       // body: Center(
       //   child: NewContainerClass(),
       // ),
-      body: Center(
-        child: TextWidget(),
-      ),
+      // body: Center(
+      //   child: TextWidget(),
+      // ),
+      // body: CardWidget(),
+      body: MyFormPage(),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
