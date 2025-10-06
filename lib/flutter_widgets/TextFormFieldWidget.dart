@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class MyFormPage extends StatefulWidget {
   const MyFormPage({super.key});
@@ -62,7 +63,12 @@ class _MyFormPageState extends State<MyFormPage> {
               // scrollPadding: EdgeInsets.symmetric(horizontal: 90),
               // enableSuggestions: true,
               autocorrect: true,
-              keyboardType: TextInputType.text,
+              keyboardType: TextInputType.number,
+              inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+              textCapitalization: TextCapitalization.words,
+              textInputAction: TextInputAction.newline,
+              textDirection: TextDirection.rtl,
+
 
               decoration: InputDecoration(
                 labelText: "Name",
@@ -80,7 +86,6 @@ class _MyFormPageState extends State<MyFormPage> {
                 print("currentState: $currentState ");
                 print(value);
               },
-              textInputAction: TextInputAction.next,
               onFieldSubmitted: (value) {
                 FocusScope.of(context).nextFocus();
               },
@@ -153,6 +158,9 @@ class _CompleteFormValidationState extends State<CompleteFormValidation> {
             children: [
               TextFormField(
                 controller: _nameController,
+                textCapitalization: TextCapitalization.words,
+                textInputAction: TextInputAction.done,
+                textDirection: TextDirection.rtl,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   enabledBorder: OutlineInputBorder(
@@ -211,6 +219,7 @@ class _CompleteFormValidationState extends State<CompleteFormValidation> {
                 ),
                 // autofocus: true,
                 keyboardType: TextInputType.text,
+                inputFormatters: [FilteringTextInputFormatter.digitsOnly],
 
                 validator: (value) {
                   if (value == null || value.trim().isEmpty) {
