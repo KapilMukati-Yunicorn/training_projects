@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:training/CustomDrawer//drawer.dart';
+import 'package:training/bottomNavigationbar/bottom_navbar.dart';
+import 'package:training/bottomNavigationbar/navbar_copy.dart';
 import 'package:training/demo.dart';
 import 'package:training/flutter_widgets/TextFormFieldWidget.dart';
 import 'package:training/flutter_widgets/card_widget.dart';
@@ -45,8 +48,10 @@ class MyApp extends StatelessWidget {
       //   home: MyGridViewWidget(),
       //   home: MyGridViewBuilderWidget(),
       //   home: ListViewBuildWidgetWithFirstCall(),
-        home: MyCustomWrapWidget(),
-      debugShowCheckedModeBanner: false
+      //   home: MyCustomWrapWidget(),
+      home: BottomNavbarWidget(),
+      // home: CustomNavBarDemo(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -113,7 +118,12 @@ class _MyHomePageState extends State<MyHomePage> {
       //   child: TextWidget(),
       // ),
       // body: CardWidget(),
-      body: MyFormPage(),
+      // body: MyFormPage(),
+      drawer: CustomDrawerWidget(),
+      body: Container(
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
