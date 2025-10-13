@@ -3,6 +3,7 @@ import 'package:training/CustomDrawer//drawer.dart';
 import 'package:training/Stream%20Builder/streambuilder.dart';
 import 'package:training/bottomNavigationbar/bottom_navbar.dart';
 import 'package:training/bottomNavigationbar/navbar_copy.dart';
+import 'package:training/buttons/elevated_button.dart';
 import 'package:training/demo.dart';
 import 'package:training/flutter_widgets/TextFormFieldWidget.dart';
 import 'package:training/flutter_widgets/card_widget.dart';
@@ -11,7 +12,7 @@ import 'package:training/flutter_widgets/image_network_image.dart';
 import 'package:training/flutter_widgets/listview_widgets.dart';
 import 'package:training/flutter_widgets/row_column_scrollview.dart';
 import 'package:training/flutter_widgets/text_widget.dart';
-import 'package:training/fruit_screen.dart';
+import 'package:training/Stream%20Builder/fruit_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -58,7 +59,8 @@ class MyApp extends StatelessWidget {
       // home: CustomScrollViewWidget(),
       // home: MyCustomIMageWidget(),
       // home: MyCustomStreamBuilderClass(),
-      home: MyFruitClass(),
+      // home: MyFruitClass(),
+      home: CustomButtonClass(),
       debugShowCheckedModeBanner: false,
     );
   }
