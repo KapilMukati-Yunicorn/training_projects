@@ -8,8 +8,11 @@ import 'package:training/demo.dart';
 import 'package:training/flutter_widgets/TextFormFieldWidget.dart';
 import 'package:training/flutter_widgets/card_widget.dart';
 import 'package:training/flutter_widgets/container_widget.dart';
+import 'package:training/flutter_widgets/custom_navbar.dart';
 import 'package:training/flutter_widgets/image_network_image.dart';
 import 'package:training/flutter_widgets/listview_widgets.dart';
+import 'package:training/flutter_widgets/my_custom_tabs.dart';
+import 'package:training/flutter_widgets/page_view.dart';
 import 'package:training/flutter_widgets/refresh_indicator.dart';
 import 'package:training/flutter_widgets/row_column_scrollview.dart';
 import 'package:training/flutter_widgets/text_widget.dart';
@@ -62,8 +65,12 @@ class MyApp extends StatelessWidget {
       // home: MyCustomStreamBuilderClass(),
       // home: MyFruitClass(),
       // home: CustomButtonClass(),
-      home: RefreshExample(),
+      // home: RefreshExample(),
       // home: CustomToast(),
+      // home: PageViewDemo(),
+      // home: PageViewDemoClass(),
+      // home: CustomNavbarNavigationBarWidget(),
+      home: MyCustomTabs(),
       debugShowCheckedModeBanner: false,
     );
   }
