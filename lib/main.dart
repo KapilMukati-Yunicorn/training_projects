@@ -10,6 +10,7 @@ import 'package:training/flutter_widgets/card_widget.dart';
 import 'package:training/flutter_widgets/container_widget.dart';
 import 'package:training/flutter_widgets/image_network_image.dart';
 import 'package:training/flutter_widgets/listview_widgets.dart';
+import 'package:training/flutter_widgets/refresh_indicator.dart';
 import 'package:training/flutter_widgets/row_column_scrollview.dart';
 import 'package:training/flutter_widgets/text_widget.dart';
 import 'package:training/Stream%20Builder/fruit_screen.dart';
@@ -60,7 +61,9 @@ class MyApp extends StatelessWidget {
       // home: MyCustomIMageWidget(),
       // home: MyCustomStreamBuilderClass(),
       // home: MyFruitClass(),
-      home: CustomButtonClass(),
+      // home: CustomButtonClass(),
+      home: RefreshExample(),
+      // home: CustomToast(),
       debugShowCheckedModeBanner: false,
     );
   }
