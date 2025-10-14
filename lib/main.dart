@@ -10,6 +10,7 @@ import 'package:training/flutter_widgets/alerts.dart';
 import 'package:training/flutter_widgets/card_widget.dart';
 import 'package:training/flutter_widgets/container_widget.dart';
 import 'package:training/flutter_widgets/custom_navbar.dart';
+import 'package:training/flutter_widgets/date_picker.dart';
 import 'package:training/flutter_widgets/image_network_image.dart';
 import 'package:training/flutter_widgets/listtile_widget.dart';
 import 'package:training/flutter_widgets/listview_widgets.dart';
@@ -20,6 +21,7 @@ import 'package:training/flutter_widgets/refresh_indicator.dart';
 import 'package:training/flutter_widgets/row_column_scrollview.dart';
 import 'package:training/flutter_widgets/text_widget.dart';
 import 'package:training/Stream%20Builder/fruit_screen.dart';
+import 'package:training/flutter_widgets/time_picker.dart';
 
 void main() {
   runApp(const MyApp());
@@ -77,7 +79,9 @@ class MyApp extends StatelessWidget {
       // home: MyCustomTabs(),
       // home: MyCustomListTileWidget(),
       // home: MyCustomBottomSheet(),
-      home: MyAlertWidget(),
+      // home: MyAlertWidget(),
+      // home: CustomDatePicker(),
+      home: MyCustomTimePicker(),
       debugShowCheckedModeBanner: false,
     );
   }
