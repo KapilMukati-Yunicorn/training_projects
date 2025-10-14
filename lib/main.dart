@@ -6,11 +6,14 @@ import 'package:training/bottomNavigationbar/navbar_copy.dart';
 import 'package:training/buttons/elevated_button.dart';
 import 'package:training/demo.dart';
 import 'package:training/flutter_widgets/TextFormFieldWidget.dart';
+import 'package:training/flutter_widgets/alerts.dart';
 import 'package:training/flutter_widgets/card_widget.dart';
 import 'package:training/flutter_widgets/container_widget.dart';
 import 'package:training/flutter_widgets/custom_navbar.dart';
 import 'package:training/flutter_widgets/image_network_image.dart';
+import 'package:training/flutter_widgets/listtile_widget.dart';
 import 'package:training/flutter_widgets/listview_widgets.dart';
+import 'package:training/flutter_widgets/modal_bottom_sheet.dart';
 import 'package:training/flutter_widgets/my_custom_tabs.dart';
 import 'package:training/flutter_widgets/page_view.dart';
 import 'package:training/flutter_widgets/refresh_indicator.dart';
@@ -66,12 +69,15 @@ class MyApp extends StatelessWidget {
       // home: MyFruitClass(),
       // home: CustomButtonClass(),
       // home: RefreshExample(),
-      home: RefreshDemo(),
+      // home: RefreshDemo(),
       // home: CustomToast(),
       // home: PageViewDemo(),
       // home: PageViewDemoClass(),
       // home: CustomNavbarNavigationBarWidget(),
       // home: MyCustomTabs(),
+      // home: MyCustomListTileWidget(),
+      // home: MyCustomBottomSheet(),
+      home: MyAlertWidget(),
       debugShowCheckedModeBanner: false,
     );
   }
