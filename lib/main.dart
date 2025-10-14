@@ -66,11 +66,12 @@ class MyApp extends StatelessWidget {
       // home: MyFruitClass(),
       // home: CustomButtonClass(),
       // home: RefreshExample(),
+      home: RefreshDemo(),
       // home: CustomToast(),
       // home: PageViewDemo(),
       // home: PageViewDemoClass(),
       // home: CustomNavbarNavigationBarWidget(),
-      home: MyCustomTabs(),
+      // home: MyCustomTabs(),
       debugShowCheckedModeBanner: false,
     );
   }

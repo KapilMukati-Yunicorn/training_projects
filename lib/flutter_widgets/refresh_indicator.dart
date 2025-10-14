@@ -153,13 +153,13 @@ class _RefreshExampleState extends State<RefreshExample> {
           },
         ),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   child: Icon(Icons.refresh),
-      //   onPressed: () {
-      //     print("FAB pressed — showing indicator");
-      //     _refreshKey.currentState?.show();
-      //   },
-      // ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.refresh),
+        onPressed: () {
+          print("FAB pressed — showing indicator");
+          _refreshKey.currentState?.show();
+        },
+      ),
     );
   }
 }
@@ -192,6 +192,57 @@ class _CustomToastState extends State<CustomToast> {
           );
         },
         child: Text("Add Item"),
+      ),
+    );
+  }
+}
+
+class RefreshDemo extends StatefulWidget {
+  @override
+  State<RefreshDemo> createState() => _RefreshDemoState();
+}
+
+class _RefreshDemoState extends State<RefreshDemo> {
+  List<String> items = List.generate(15, (index) => "Item ${index + 1}");
+
+  Future<void> _refreshData() async {
+    // simulate a delay (like fetching from API)
+    await Future.delayed(Duration(seconds: 2));
+
+    setState(() {
+      // items.insert(0, "New Item ${items.length + 1}");
+      items.add("New Item ${items.length + 1}");
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("RefreshIndicator Demo"),
+        backgroundColor: Colors.teal,
+      ),
+      body: RefreshIndicator(
+        onRefresh: _refreshData,
+        color: Colors.white,
+        backgroundColor: Colors.teal,
+        displacement: 50,
+        strokeWidth: 3,
+
+        // 👇 child must be scrollable
+        child: ListView.builder(
+          physics: const AlwaysScrollableScrollPhysics(),
+          itemCount: items.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+              leading: Icon(Icons.list, color: Colors.teal),
+              title: Text(
+                items[index],
+                style: TextStyle(fontSize: 18),
+              ),
+            );
+          },
+        ),
       ),
     );
   }

@@ -34,7 +34,17 @@ class _CustomNavbarNavigationBarWidgetState
         indicatorColor: Colors.deepPurpleAccent,
         selectedIndex: _selectedIndex,
         labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
-
+        overlayColor: MaterialStateProperty.resolveWith<Color?>((
+            Set<MaterialState> states,
+            ) {
+          if (states.contains(MaterialState.pressed)) {
+            return Colors.green; // when pressed
+          }
+          if (states.contains(MaterialState.hovered)) {
+            return Colors.grey; // on hover
+          }
+          return null; // default
+        }),
         labelTextStyle: MaterialStateProperty.all(TextStyle(
           color: Colors.blue,
         )),

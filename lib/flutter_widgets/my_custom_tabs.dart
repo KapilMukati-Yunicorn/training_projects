@@ -35,7 +35,7 @@ class _MyCustomTabsState extends State<MyCustomTabs> {
               physics: BouncingScrollPhysics(),
               dividerColor: Colors.grey,
               indicatorWeight: 3,
-              // dragStartBehavior: DragStartBehavior.start,
+              dragStartBehavior: DragStartBehavior.down,
               unselectedLabelColor: Colors.white,
 
               unselectedLabelStyle: TextStyle(
