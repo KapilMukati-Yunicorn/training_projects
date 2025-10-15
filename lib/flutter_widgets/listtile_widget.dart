@@ -26,7 +26,7 @@ class MyCustomListTileWidget extends StatelessWidget {
               title: Text("Raj$index"),
               hoverColor: Colors.blueGrey.shade200,
               tileColor: Colors.blueGrey.shade50,
-              splashColor: Colors.green.shade100,
+              // splashColor: Colors.green.shade100,
               // minTileHeight: 20,
               style: ListTileStyle.list,
               // textColor: Colors.red,
@@ -69,6 +69,7 @@ class MyCustomListTileWidget extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         ListTile(
+                          statesController: WidgetStatesController(),
                           leading: const Icon(Icons.edit),
                           title: const Text("Edit"),
                           onTap: () => Navigator.pop(context, "Edit"),

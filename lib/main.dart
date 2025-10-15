@@ -12,6 +12,7 @@ import 'package:training/flutter_widgets/container_widget.dart';
 import 'package:training/flutter_widgets/custom_navbar.dart';
 import 'package:training/flutter_widgets/date_picker.dart';
 import 'package:training/flutter_widgets/image_network_image.dart';
+import 'package:training/flutter_widgets/image_picker.dart';
 import 'package:training/flutter_widgets/listtile_widget.dart';
 import 'package:training/flutter_widgets/listview_widgets.dart';
 import 'package:training/flutter_widgets/modal_bottom_sheet.dart';
@@ -81,7 +82,8 @@ class MyApp extends StatelessWidget {
       // home: MyCustomBottomSheet(),
       // home: MyAlertWidget(),
       // home: CustomDatePicker(),
-      home: MyCustomTimePicker(),
+      // home: MyCustomTimePicker(),
+      home: CustomImagePicker(),
       debugShowCheckedModeBanner: false,
     );
   }

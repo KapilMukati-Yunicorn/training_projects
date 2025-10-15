@@ -37,6 +37,7 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
                         // primary: Colors.cyan,
                         // onPrimary: Colors.white,
                         // onSurface: Colors.black
+
                         datePickerTheme: DatePickerThemeData(
                           dayShape: MaterialStateProperty.all(
                             RoundedRectangleBorder(
@@ -83,6 +84,7 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
                           todayBackgroundColor: MaterialStateProperty.all(
                             Colors.red.shade400,
                           ),
+
                           backgroundColor: Colors.grey.shade300,
                           headerBackgroundColor: Colors.cyan,
                           headerForegroundColor: Colors.white,

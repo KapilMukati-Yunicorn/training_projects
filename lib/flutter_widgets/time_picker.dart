@@ -25,13 +25,17 @@ class _MyCustomTimePickerState extends State<MyCustomTimePicker> {
                 context: context,
                 initialTime: TimeOfDay.now(),
                 builder: (context, child) {
+                  print("-------------------------------------");
+                  print(child);
+                  print("---------------------------------------");
                   return Theme(data: Theme.of(context).copyWith(
                     timePickerTheme: TimePickerThemeData(
                       dialBackgroundColor: Colors.deepPurple.shade300,
                       dialHandColor: Colors.grey,
-                      dialTextColor: Colors.white60,
+                      dialTextColor: Colors.white,
                       backgroundColor: Colors.grey,
                       hourMinuteColor: Colors.white,
+                      hourMinuteShape: CircleBorder(),
                       dayPeriodColor: Colors.deepPurple.shade300,
                       dayPeriodShape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.elliptical(10, 40))),
                       dialTextStyle: TextStyle(
