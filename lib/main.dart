@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:training/Animtaion/animated_alignment.dart';
+import 'package:training/Animtaion/animated_container.dart';
+import 'package:training/Animtaion/animated_positioned.dart';
+import 'package:training/Animtaion/animated_rotation.dart';
+import 'package:training/Animtaion/tween_animation.dart';
 import 'package:training/CustomDrawer//drawer.dart';
 import 'package:training/Stream%20Builder/streambuilder.dart';
 import 'package:training/bottomNavigationbar/bottom_navbar.dart';
@@ -87,7 +92,12 @@ class MyApp extends StatelessWidget {
       // home: MyCustomTimePicker(),
       // home: CustomImagePicker(),
       // home: MySwitchWidget(),
-      home: MyCustomSliderState(),
+      // home: MyCustomSliderState(),
+      // home: MyAnimatedContainer(),
+      // home: AnimatedAlignExample(),
+      // home: MyAnimatedPositioned(),
+      // home: AnimatedRotationExample(),
+      home: CustomAnimation(),
       debugShowCheckedModeBanner: false,
     );
   }
